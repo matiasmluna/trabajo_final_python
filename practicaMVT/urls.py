@@ -24,6 +24,7 @@ from AppCoder.views import buscar, busquedaCamada
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', familiares, name="familiares"),
     path('familiares/', familiares, name="familiares"),
     path('productos/', productos, name="productos"),
     path('profesiones/', profesiones, name="profesiones"),
