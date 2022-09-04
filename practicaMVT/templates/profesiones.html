@@ -1,0 +1,18 @@
+{% extends './padre.html' %}
+
+{% load static %}
+
+{% block cambio %}
+
+<h1>Lista de Profesiones</h1>
+    <h2>
+        {% for n in profesion %}
+            
+        <p>Profesion:{{n.profesion}}</p>
+        <p>Sueldo:{{n.sueldo}}</p><br>
+
+        {% endfor %}
+
+    </h2>
+
+{% endblock %}

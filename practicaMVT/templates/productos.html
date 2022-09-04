@@ -1,0 +1,19 @@
+{% extends './padre.html' %}
+
+{% load static %}
+
+{% block cambio %}
+
+<h1>Lista de Articulos</h1>
+    <h2>
+        {% for n in articulo %}
+            
+        <p>Producto:{{n.nombre_articulo}}</p>
+        <p>Stock:{{n.stock}}</p>
+        <p>Precio:{{n.precio}}</p><br>
+
+        {% endfor %}
+
+    </h2>
+
+{% endblock %}

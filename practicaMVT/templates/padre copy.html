@@ -1,0 +1,200 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="icon" href="{% static 'favicon.ico' %}">
+        <title>Matias Luna</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="author" content="">
+        <!-- Mobile Specific Metas
+        ================================================== -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <!-- Twitter Bootstrs CSS -->
+        <link rel="stylesheet" href="{% static '/plugins/bootstrap/bootstrap.min.css' %}">
+        <!-- Ionicons Fonts Css -->
+        <link rel="stylesheet" href="{% static '/plugins/ionicons/ionicons.min.css' %}">
+        <!-- animate css -->
+        <link rel="stylesheet" href="{% static '/plugins/animate-css/animate.css' %}">
+        <!-- Hero area slider css-->
+        <link rel="stylesheet" href="{% static '/plugins/slider/slider.css' %}">
+        <!-- slick slider -->
+        <link rel="stylesheet" href="{% static '/plugins/slick/slick.css' %}">
+        <!-- Fancybox -->
+        <link rel="stylesheet" href="{% static '/plugins/facncybox/jquery.fancybox.css' %}">
+        <!-- hover -->
+        <link rel="stylesheet" href="{% static '/plugins/hover/hover-min.css' %}">
+        <!-- template main css file -->
+        <link type='text/css' rel="stylesheet" href="{% static '/css/style.css' %}">
+    </head>
+    <body>
+
+    <header>
+
+      <section class="top-bar animated-header">
+        <div class="container">
+          <div class="row">
+              <div class="col-lg-12">
+                  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                      <button class="navbar-toggler bg-secondary" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                          aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                      </button>
+
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                          <ul class="navbar-nav ml-auto">
+                              <li class="nav-item">
+                                <a class="nav-link" href="/familiares">Familiares
+                                  <span class="sr-only">(current)</span>
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link" href="/admin">Admin
+                                      <span class="sr-only">(current)</span>
+                                  </a>
+                              </li>
+                              <li class="nav-item dropdown">
+                                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                      aria-expanded="false">
+                                      Mis proyectos
+                                  </a>
+                                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                      <!-- <a class="dropdown-item" href="#">Adgaba.com</a> -->
+                                      <a class="dropdown-item" href="https://www.facebook.com/abuboxAr">Abubox</a>
+                                      <a class="dropdown-item" href="https://www.facebook.com/Nerguscom/">Nergus</a>
+                                      <a class="dropdown-item" href="#">Sport DeeDee</a>
+                                  </div>
+                              </li>
+                          </ul>
+                      </div>
+                  </nav>
+              </div>
+          </div>
+      </div>
+</section>
+
+  </header>
+
+
+    <section id="hero-area" >
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12 text-center">
+                  <div class="block wow fadeInUp" data-wow-delay=".3s">
+  
+                      <!-- Slider -->
+                      <section class="cd-intro">
+
+                        {% block cambio %}
+
+                        {% endblock %}
+
+
+                      </section>
+                          <h2 class="wow fadeInUp animated" data-wow-delay=".4s" >
+                              ¡Soy un desarrollador full stack con espiritu emprendedor!<br>
+                          </h2>
+                      </div>
+                  </div>
+              </div>
+          </div>
+   </section>
+  
+
+
+
+
+
+  <section id="hero-area" >
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="block wow fadeInUp" data-wow-delay=".3s">
+
+                    <!-- Slider -->
+                    <section class="cd-intro">
+                      <h1 class="wow fadeInUp animated cd-headline slide" data-wow-delay=".4s" >
+                        <span>¡Gracias por visitar mi página! <br>Estos son algunos de mis proyectos:</span><br>
+                        <span class="cd-words-wrapper">
+                          <b class="is-visible">NERGUS</b>
+                          <b>ABUBOX</b>
+                          <b>SPORT DEEDEE</b>
+                        </span>
+                      </h1>
+                    </section>
+                        <h2 class="wow fadeInUp animated" data-wow-delay=".4s" >
+                            ¡Soy un desarrollador full stack con espiritu emprendedor!<br>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+ </section>
+
+  <section id="call-to-action">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+            <div class="block">
+              <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">¿Querés contactarme?</h1>
+                <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">
+                    Por cualquier consulta que tengas no dudes en comunicarte conmigo.
+                </p>
+                <a href="mailto:matias.lunam@gmail.com" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".2s" data-wow-duration="500ms">
+                  Contactarme
+                </a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="container">
+      <div class="row content-justify-between">
+        <div class="col-md-8 col-12 text-center text-lg-left text-md-left">
+          <p class="copyright">Copyright: Diseñado por
+              <a href="https://www.linkedin.com/in/matiasmluna/" target="_blank">Matias Luna</a>. <br>
+          </p>
+        </div>
+        <div class="col-md-4 col-12">
+          <ul class="social text-center text-md-right text-lg-right">
+            <li>
+              <a href="https://www.linkedin.com/in/matiasmluna/" class="Linkedin">
+                <i class="ion-social-linkedin"></i>
+              </a>
+              <a href="https://github.com/matiasluna19" class="Linkedin">
+                <i class="ion-social-github"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+	<script src="{% static '/plugins/jQurey/jquery.min.js' &}"></script>
+	<!-- Form Validation -->
+    <script src="{% static '/plugins/form-validation/jquery.form.js' %}"></script>
+    <script src="{% static '/plugins/form-validation/jquery.validate.min.js' %}"></script>
+	<!-- slick slider -->
+	<script src="{% static '/plugins/slick/slick.min.js' %}"></script>
+	<!-- bootstrap js -->
+	<script src="{% static '/plugins/bootstrap/bootstrap.min.js' %}"></script>
+	<!-- wow js -->
+	<script src="{% static '/plugins/wow-js/wow.min.js' %}"></script>
+	<!-- slider js -->
+	<script src="{% static '/plugins/slider/slider.js' %}"></script>
+	<!-- Fancybox -->
+	<script src="{% static '/plugins/facncybox/jquery.fancybox.js' %}"></script>
+	<!-- template main js -->
+	<script src="{% static '/js/main.js' %}"></script>
+
+ 	</body>
+</html>

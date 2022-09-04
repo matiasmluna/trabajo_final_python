@@ -1,0 +1,19 @@
+{% extends './padre.html' %}
+
+{% load static %}
+
+{% block cambio %}
+
+<h1>Lista de familiares</h1>
+    <h2>
+        {% for n in familiar %}
+            
+        <p>Nombre:{{n.nombre}}</p>
+        <p>Fecha de Nacimiento:{{n.fechaDeNacimiento}}</p>
+        <p>Edad:{{n.edad}}</p><br>
+
+        {% endfor %}
+
+    </h2>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends './padre.html' %}
+
+{% load static %}
+
+{% block cambio %}
+
+
+    {% if miFormulario.errors %}
+
+    <p style="color: red;"> Están mal los datos, revisar</p>
+
+    {% endif %}
+
+    <form action="" method="POST">{% csrf_token %}
+        
+        <table style="background-color: black;position: relative;top: 0; left: 40%;">
+
+            {{ miFormulario.as_table }}
+
+        </table>
+
+        <input type="submit", value="Enviar" style="position: relative;top: 20px">
+
+    </form>
+
+
+{% endblock %}

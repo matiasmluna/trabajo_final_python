@@ -1,0 +1,36 @@
+{% extends './padre.html' %}
+
+{% load static %}
+
+{% block cambio %}
+
+    <h3 style="color: black">Podes buscar un prodcuto por el precio:</h3>
+
+    <form action="/buscar/" method="GET">
+
+        <input type="number" name="precio" id="precio">
+
+        <input type="submit" value="Buscar">
+
+    </form>
+
+    {% if articulos %}
+
+    <p style="color: black">Estamos buscando el: {{precio}}</p>
+
+    <ul style="color: black">
+	{% for articulo in articulos %}
+		<li style="color: black"> {{articulo.nombre_articulo}} </li>
+		<li style="color: black"> {{articulo.stock}} </li>
+    	<li style="color: black"> {{articulo.precio}} </li>  
+	{% endfor %}
+
+    </ul>
+
+    {% endif %}
+
+
+
+{% endblock %}
+
+
