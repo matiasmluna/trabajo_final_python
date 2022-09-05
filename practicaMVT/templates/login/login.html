@@ -1,0 +1,27 @@
+{% extends '../padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+    Login
+{% endblock %}
+
+
+{% block cambio %}
+
+<form action="" method="POST">
+{% csrf_token %}
+
+    <table>
+        {{form.as_p}}
+    </table>
+    <p>
+        <input type="submit" value="Iniciar Sesión"> 
+    </p>
+</form>
+
+<p style="color:red;">{{error}} </p>
+
+{% endblock %}
+
+

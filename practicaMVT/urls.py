@@ -15,16 +15,16 @@ Including another URLconf
 """
 from xml.etree.ElementInclude import include
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from AppCoder.views import familiares, familiaresFormulario
 from AppCoder.views import productos, productosFormulario
 from AppCoder.views import profesiones, profesionesFormulario
-from AppCoder.views import buscar, busquedaCamada
+from AppCoder.views import buscar, busquedaCamada, index
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', familiares, name="familiares"),
+    path('', index, name="index"),
     path('familiares/', familiares, name="familiares"),
     path('productos/', productos, name="productos"),
     path('profesiones/', profesiones, name="profesiones"),
@@ -33,5 +33,5 @@ urlpatterns = [
     path('profesionesFormulario/', profesionesFormulario, name="profesionesFormulario"),
     path('buscar/', buscar, name="buscar"),
     path('busquedaProductoPrecio', busquedaCamada, name="busquedaCamada"),
-
+    path('login/', include('login.urls')),
 ]

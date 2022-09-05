@@ -125,6 +125,10 @@ def busquedaCamada(resquest):
 
     return render(resquest, './practicaMVT/templates/buscador.html')
 
+def index(resquest):
+
+    return render(resquest, './practicaMVT/templates/index.html')
+
 
 def buscar(request):
 
