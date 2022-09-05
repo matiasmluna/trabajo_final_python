@@ -9,9 +9,9 @@ from django.template.defaultfilters import slugify
 
 
 #class Avatar(models.Model):
-#    #vinvulo con el usuario
+    #vinvulo con el usuario
 #    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    #Subcaperta avatares de media :) 
+   #Subcaperta avatares de media :) 
 #    imagen = models.ImageField(upload_to='avatares', null=True, blank = True)
 
 #    def __str__(self):

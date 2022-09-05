@@ -1,12 +1,12 @@
-from distutils.command.upload import upload
 from email.mime import image
 from tkinter import CASCADE
 from django.db import models
+from django.contrib.auth.models import User
 
 class User_profile(models.Model):
-    user = models.OneToOneField('auth.User', on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     phone = models.CharField(max_length=20, blank=True)
-    image = models.ImageField(upload_to='profile_image/',black=True)
+    image = models.ImageField(upload_to='imagen_perfil/',blank=True)
 
 class Avatar(models.Model):
     #vinvulo con el usuario

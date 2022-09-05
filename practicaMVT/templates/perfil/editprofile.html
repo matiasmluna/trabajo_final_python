@@ -9,11 +9,11 @@
 
 {% block contenidoQueCambia %}
 
-    <h1 style="color:black;">Formulario - Editar Perfil</h1>
-    <h1 style="color:black;">De {{usuario}}</h1>
+    <h2 >Formulario - Editar Perfil</h2>
+    <h2 style="color:black;">De {{ request.user }}</h2>
     
 
-    <form action="" method="POST" style="color:black;">
+    <form action="" method="POST" >
     {% csrf_token %}
         
         <table>
@@ -22,7 +22,5 @@
 
         <input type="submit", value="Guardar cambios">
     </form>
-
-  
 
 {% endblock %}

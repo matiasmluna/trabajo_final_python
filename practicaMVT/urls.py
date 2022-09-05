@@ -34,6 +34,6 @@ urlpatterns = [
     path('buscar/', buscar, name="buscar"),
     path('busquedaProductoPrecio', busquedaCamada, name="busquedaCamada"),
     path('login/', include('login.urls')),
-    path('register/', include('registro.urls')),
+    path('accounts/signup/', include('registro.urls')),
     path('perfil/', include('perfiles.urls')),
 ]
