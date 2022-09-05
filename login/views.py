@@ -19,5 +19,10 @@ def login_request(request):
       elif request.method == "GET":
             form = AuthenticationForm()
             return render(request,"./practicaMVT/templates/login/login.html", {'form':form} )
+
+def logout_request(request):
+      logout(request)
+      messages.info(request, "Saliste sin problemas")
+      return redirect("inicio")
       
 
