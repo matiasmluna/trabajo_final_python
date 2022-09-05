@@ -19,12 +19,12 @@ from django.urls import path, include
 from AppCoder.views import familiares, familiaresFormulario
 from AppCoder.views import productos, productosFormulario
 from AppCoder.views import profesiones, profesionesFormulario
-from AppCoder.views import buscar, busquedaCamada, index
-
+from AppCoder.views import buscar, busquedaCamada, index, about
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name="index"),
+    path('about/', about, name="about"),
     path('familiares/', familiares, name="familiares"),
     path('productos/', productos, name="productos"),
     path('profesiones/', profesiones, name="profesiones"),
@@ -35,4 +35,5 @@ urlpatterns = [
     path('busquedaProductoPrecio', busquedaCamada, name="busquedaCamada"),
     path('login/', include('login.urls')),
     path('register/', include('registro.urls')),
+    path('perfil/', include('perfiles.urls')),
 ]

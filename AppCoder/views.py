@@ -4,11 +4,18 @@ from django.shortcuts import render, HttpResponse
 from django.http import HttpResponse
 from django.template import Template, Context
 from AppCoder.form import FamiliarFormulario, ProfesionesFormulario, ProductosFormulario
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
+
 
 
 # Create your views here.
 from django.http import HttpResponse
 from AppCoder.models import Familiares, Profesiones, Articulos
+
+def about(resquest):
+
+    return render(resquest, './practicaMVT/templates/about.html')
 
 def familiares(resquest):
     
@@ -28,6 +35,7 @@ def profesiones(resquest):
 
     return render(resquest, './practicaMVT/templates/profesiones.html', context=context)
 
+@login_required
 def productos(resquest):
     
     articulo = Articulos.objects.all()
