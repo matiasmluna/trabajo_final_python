@@ -33,7 +33,7 @@ urlpatterns = [
     path('profesionesFormulario/', profesionesFormulario, name="profesionesFormulario"),
     path('buscar/', buscar, name="buscar"),
     path('busquedaProductoPrecio', busquedaCamada, name="busquedaCamada"),
-    path('login/', include('login.urls')),
+    path('accounts/login/', include('login.urls')),
     path('accounts/signup/', include('registro.urls')),
-    path('perfil/', include('perfiles.urls')),
+    path('accounts/perfil/', include('perfiles.urls')),
 ]

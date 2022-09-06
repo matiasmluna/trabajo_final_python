@@ -7,13 +7,17 @@
 {% endblock %}
 
 
-{% block contenidoQueCambia %}
+{% block cambio %}
 
-    <h2 >Formulario - Editar Perfil</h2>
-    <h2 style="color:black;">De {{ request.user }}</h2>
+    <h2 >
+        Formulario - Editar Perfil
+    </h2>
+    <h2 style="color:black;">
+        De {{ request.user }}
+    </h2>
     
 
-    <form action="" method="POST" >
+    <form action="" method="POST" style="color:black;">
     {% csrf_token %}
         
         <table>

@@ -7,19 +7,23 @@ from django.contrib.auth import authenticate
 
 @login_required
 def editarPerfil(request):
-      #Instancia del login
+      
       usuario = request.user
-      #Si es metodo POST hago lo mismo que el agregar
+      
       if request.method == 'POST':
             miFormulario = UserEditForm(request.POST) 
-            if miFormulario.is_valid:   #Si pasó la validación de Django
-                  informacion = miFormulario.cleaned_data
-                  #Datos que se modificarán
+
+            if miFormulario.is_valid:  
+                  informacion = miFormulario
+                  #informacion = miFormulario.cleaned_data.get()
+                  
                   usuario.email = informacion['email']
                   usuario.password1 = informacion['password1']
                   usuario.password2 = informacion['password1']
+                  usuario.imagen_avatar = informacion['imagen_avatar']
+
                   usuario.save()
-                  return render(request, "./practicaMVT/templates/perfil/editprofile.html") #Vuelvo al inicio o a donde quieran
+                  return render(request, "./practicaMVT/templates/inicio.html", {"mensaje":f"Los cambios de {usuario} fueron realizados"}) #Vuelvo al inicio o a donde quieran
       #En caso que no sea post
       else: 
             #Creo el formulario con los datos que voy a modificar
